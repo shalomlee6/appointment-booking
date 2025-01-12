@@ -1,1 +1,47 @@
-<p>add-appointment works!</p>
+<form [formGroup]="appointmentForm" (ngSubmit)="saveAppointment()">
+    <mat-card appearance="outlined">
+        <mat-card-header>
+        <mat-card-title>Add Appointment</mat-card-title>
+        <mat-card-subtitle>book an appointment today</mat-card-subtitle>
+        </mat-card-header>
+    
+        <mat-card-content>
+        
+            <mat-form-field>
+                <mat-label>{{hebLabel.appointment.name}}</mat-label>
+                <input matInput formControlName="id" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>{{hebLabel.appointment.name}}</mat-label>
+                <input matInput formControlName="name" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>{{hebLabel.appointment.date}}</mat-label>
+                <input matInput formControlName="date" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>{{hebLabel.appointment.type}}</mat-label>
+                <input matInput formControlName="type" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>{{hebLabel.appointment.time}}</mat-label>
+                <input matInput formControlName="time" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>{{hebLabel.appointment.address}}</mat-label>
+                <input matInput formControlName="address" >
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>{{hebLabel.appointment.price}}</mat-label>
+                <input matInput formControlName="price" >
+            </mat-form-field>
+
+        
+        </mat-card-content>
+    
+        <mat-card-actions>
+        <button mat-flat-button color="primary">Save</button>
+        <button mat-raised-button color="accent">Close</button>
+        </mat-card-actions>
+    </mat-card>
+</form>
